@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2e2e2e, #1a1a1a); /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff; /* White text */
+}
+
+.container {
+    text-align: center;
+    background-color: #2a2a2a; /* Dark background for the game container */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: #f5f5f5; /* Lighter white for heading */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    margin: 0 auto 20px;
+}
+
+.cell {
+    background: #1e1e1e; /* Dark black background for cells */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    transition: all 0.4s ease; /* Smoother animations */
+    color: #fff; /* White color for text */
+}
+
+.cell:hover {
+    background: #7a00ff; /* Purple highlight on hover */
+    transform: scale(1.1); /* Enlarging effect */
+    box-shadow: 0 8px 20px rgba(122, 0, 255, 0.7); /* Purple shadow glow */
+}
+
+.cell:active {
+    transform: scale(0.95);
+    background: #5900cc; /* Darker purple when clicked */
+}
+
+.game-status {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #d4d4d4; /* Softer white */
+    transition: color 0.3s ease;
+}
+
+.restart-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #7a00ff; /* Purple button */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.restart-btn:hover {
+    background-color: #5900cc; /* Darker purple on hover */
+    transform: scale(1.05); /* Slight scaling for satisfaction */
+}
+
+.restart-btn:active {
+    transform: scale(0.95);
+}
